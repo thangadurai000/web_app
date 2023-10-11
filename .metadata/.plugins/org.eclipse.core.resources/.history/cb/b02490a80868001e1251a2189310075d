@@ -1,0 +1,11 @@
+import org.springframework.web.bind.annotation.PostMapping;
+
+public class CustomerControlor {
+	
+	@PostMapping(value="/bank")
+	public List<Bank> getallanother() {
+		String url ="http://localhost:8080/bank/details";
+	}
+	
+
+}

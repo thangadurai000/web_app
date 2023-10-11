@@ -1,0 +1,19 @@
+package bankSerivse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import bankdao.bankdao;
+
+@Service
+public class bankSerivse {
+	@Autowired bankdao bankdao;
+
+	public String getifsebybranch( String branch) {
+		
+		
+		return bankdao.getifsebybranch(branch);
+
+	}
+}

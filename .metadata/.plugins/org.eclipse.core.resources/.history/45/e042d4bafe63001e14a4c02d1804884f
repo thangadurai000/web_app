@@ -1,0 +1,13 @@
+package com.oasys.employee.repository;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.oasys.employee.endity.Employee;
+
+public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
+@Query(value = "select * from employee_details where age>?",nativeQuery = true)
+	
+
+}

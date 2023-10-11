@@ -1,0 +1,15 @@
+package Excaption;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+@RestControllerAdvice
+public class GlobalExceptions {
+@ExceptionHandler(AgeNotFoundException.class)
+public ResponseEntity<Object> agehandler(AgeNotFoundException m1){
+	return new ResponseEntity<Object>(m1.getMessage(),HttpStatus.NOT_FOUND);
+}
+
+
+}

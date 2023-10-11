@@ -1,0 +1,28 @@
+package com.oasys.employee.dao;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.oasys.employee.endity.Employee;
+import com.oasys.employee.repository.EmployeeRepo;
+@Repository
+public class Employeedao {
+	@Autowired
+	EmployeeRepo emposo;
+	public String insertEmployee(Employee e) {
+	
+		emposo.save(e);
+		return "success";
+	}
+	
+	public String insertEmployee1(List<Employee> e) {
+	
+		return emposo.saveAll(e);
+	}
+	
+	
+
+}

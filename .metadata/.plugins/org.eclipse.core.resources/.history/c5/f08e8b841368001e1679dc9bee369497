@@ -1,0 +1,14 @@
+package bankdao;
+
+import java.util.List;
+
+import com.oasys.Bank.BankApplication;
+
+public class bankdao {
+
+	public String insertlist(List<BankApplication> detail) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
